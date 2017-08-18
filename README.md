@@ -28,7 +28,7 @@
 ```
 文件首先加载了“react.js" "react-dom.js"两个最基本的库与DOM操作相关的 功能。后又加载了”babel.min.js“	，官方建议：它会执行一个缓慢的运行时代码转换，所以不要在生产环境使用它。
 官网上还提供另外两种安装React的方法。
-## Hello，World  
+## Hello，World  查看demo[Hello](https://github.com/FrankWang1991/ReactFoundation/tree/master/Demo01-Helloworld)
 万丈高楼平地起，万行代码起于此。每个新编码都从hello，world说起，这个也不例外。分析”安装“里提到的文件。
 	可以看到在`<body>` 标签中添加了`<script type="text/babel">` ，这是代表使用了[JSX语法](http://www.css88.com/react/docs/introducing-jsx.html)。
 	在Html文件中有`<div id="root"></div>` 这样的根节点。要渲染一个React元素到一个根DOM节点，把他们传递给`ReacDOM.render()`方法。如上图所示。  
