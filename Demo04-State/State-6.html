@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Components</title>
+    <script src="https://unpkg.com/react@latest/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      class SetProps extends React.Component{
+        constructor(){
+          super();
+          this.state={
+            age:18,
+        }}
+          render(){
+            return (
+            <div>
+              <h1>Hello,{this.props.name}</h1>
+              <p>{this.props.name}的性别是：{this.props.sex},年龄是{this.state.age}</p>
+              <p>this is use ES6</p>
+            </div>
+            )
+        }
+    }
+    SetProps.defaultProps = {
+        name:"LiLei",
+        sex:"male",
+  }
+      ReactDOM.render(
+        <SetProps />,
+        document.getElementById('root')
+      );
+    </script>
+  </body>
+</html>
