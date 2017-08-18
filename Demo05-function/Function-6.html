@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Components</title>
+    <script src="https://unpkg.com/react@latest/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <style type="text/css">
+    .student{
+      color:orange;
+    }
+    .main{
+      background: lightblue;
+    }
+  </style>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      class SetFunction extends React.Component{
+        constructor(props){
+          super(props);
+          this.state={
+            age:18,
+        };
+
+      }
+        ChangeAge(){
+          this.setState({
+          age : this.state.age + 1
+        })
+      }
+          render(){
+            return (
+            <div>
+              <h1>Hello,{this.props.name}</h1>
+              <p>{this.props.name}的性别是：{this.props.sex},年龄是:{this.state.age}</p>
+              <p>this is use ES6</p>
+              <button type="button" onClick={(e)=>this.ChangeAge(e)}>change age</button>
+            </div>
+            )
+        }
+
+    }
+    SetFunction.defaultProps = {
+        name:"LiLei",
+        sex:"male",
+  }
+      ReactDOM.render(
+        <SetFunction />,
+        document.getElementById('root')
+      );
+    </script>
+  </body>
+</html>
